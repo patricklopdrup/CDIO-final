@@ -3,39 +3,60 @@
 <head>
     <script type="text/javascript" src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
+    <link rel="shortcut icon" href="img/logo.png">
     <meta charset="UTF-8">
-    <title>Regnskabsprogram</title>
+    <title>Regnskabshjælper</title>
 </head>
 
 <body>
-<h1>Regnskabsprogram</h1>
+<h1 class="title is-2 has-text-centered">Regnskabshjælper</h1>
 
-<div>
-    <form action="" target="_self">
-        <label for="category">Kategori: </label><br>
-        <input id="category" type="text" class="input is-rounded" name="category"> <br>
 
-        <label for="productName">Produkt navn: </label> <br>
-        <input id="productName" type="text" name="productName"> <br>
+<div class="columns is-mobile is-centered">
+    <div class="column is-half">
+        <form action="" target="_self">
 
-        <label for="price">Pris (excl. moms): </label> <br>
-        <input id="price" type="number" name="price">
+            <div class="">
+                <label for="category" class="label">Kategori: </label>
+                <input id="category" type="text" class="input is-rounded" name="category"> <br><br>
+            </div>
 
-        <label for="amount">Antal:</label>
-        <input id="amount" type="number" name="amount"> <br>
+            <div class="">
+                <label for="productName" class="label">Produkt navn: </label>
+                <input id="productName" type="text" class="input is-rounded" name="productName"> <br><br>
+            </div>
 
-        <label for="dateOfPurchase">Dato for køb: </label> <br>
-        <input id="dateOfPurchase" type="text" name="dateOfPurchase"> <br>
+            <div class="columns is-mobile">
+                <div class="column is-three-quarters">
+                    <label for="price" class="label">Pris (excl. moms): </label>
+                    <input id="price" type="number" class="input is-rounded" name="price">
+                </div>
 
-        <label for="buyersName">Købers navn: </label> <br>
-        <input id="buyersName" type="text" name="buyersName"> <br>
-		
-		<label for="comment">Kommentar: </label> </br>
-		<input id="comment" type="text" name="comment"> </br>
+                <div class="column">
+                    <label for="amount" class="label">Antal:</label>
+                    <input id="amount" type="number" class="input is-rounded" name="amount">
+                </div>
+            </div>
 
-        <input type="submit" id="button" value="Indsend">
-    </form>
+            <div>
+                <label for="dateOfPurchase" class="label">Dato for køb: </label>
+                <input id="dateOfPurchase" type="text" class="input is-rounded" name="dateOfPurchase"> <br><br>
+            </div>
+
+            <div>
+                <label for="buyersName" class="label">Købers navn: </label>
+                <input id="buyersName" type="text" class="input is-rounded" name="buyersName"> <br><br>
+            </div>
+
+                <label for="comment" class="label">Kommentar: </label>
+                <textarea id="comment" class="textarea" placeholder="Købt grundet..."></textarea> </br>
+
+            <input type="submit" class="button" id="button" value="Indsend">
+        </form>
+    </div>
+
 </div>
+
 
 </body>
 </html>
