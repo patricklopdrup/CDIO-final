@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="script.js"></script>
+
     <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
-    <link rel="shortcut icon" href="img/logo_w_white_border.png">
+    <link rel="shortcut icon" href="img/logo_white.png">
+
     <meta charset="UTF-8">
     <title>Regnskabshjælper</title>
 </head>
@@ -11,10 +16,9 @@
 <body>
 <h1 class="title is-2 has-text-centered">Regnskabshjælper</h1>
 
-
 <div class="columns is-mobile is-centered">
     <div class="column is-half">
-        <form action="" target="_self">
+        <form action="" method="post" target="_self">
 
             <div class="">
                 <label for="category" class="label">Kategori: </label>
@@ -40,7 +44,7 @@
 
             <div>
                 <label for="dateOfPurchase" class="label">Dato for køb: </label>
-                <input id="dateOfPurchase" type="text" class="input is-rounded" name="dateOfPurchase"> <br><br>
+                <input id="dateOfPurchase" type="date" class="input is-rounded" name="dateOfPurchase"> <br><br>
             </div>
 
             <div>
@@ -57,6 +61,13 @@
 
 </div>
 
+<script>
+    //show JSON object in the browser console
+    $("form").submit(function (event) {
+        console.log( $(this).serializeArray() );
+        event.preventDefault();
+    });
+</script>
 
 </body>
 </html>
