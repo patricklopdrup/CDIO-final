@@ -28,6 +28,7 @@
 </head>
 
 <body>
+<br>
 <h1 class="title is-2 has-text-centered">Regnskabshjælper</h1>
 
 <div class="columns is-mobile is-centered">
@@ -36,23 +37,23 @@
 
             <div class="">
                 <label for="category" class="label">Kategori: </label>
-                <input id="category" type="text" class="input is-rounded" name="category"> <br><br>
+                <input id="category" type="text" maxlength="45" class="input is-rounded" placeholder="Jubilæumsgaver" name="category"> <br><br>
             </div>
 
             <div class="">
                 <label for="productName" class="label">Produkt navn: </label>
-                <input id="productName" type="text" class="input is-rounded" name="productName"> <br><br>
+                <input id="productName" type="text" maxlength="45" class="input is-rounded" placeholder="Porsche 911 Carrera 4S" name="productName"> <br><br>
             </div>
 
             <div class="columns is-mobile">
                 <div class="column is-three-quarters">
-                    <label for="price" class="label">Pris (excl. moms): </label>
-                    <input id="price" type="number" class="input is-rounded" name="price">
+                    <label for="price" class="label">Pris i kroner (excl. moms): </label>
+                    <input id="price" type="number" min="0" class="input is-rounded" placeholder="499.900" name="price">
                 </div>
 
                 <div class="column">
                     <label for="amount" class="label">Antal:</label>
-                    <input id="amount" type="number" class="input is-rounded" name="amount">
+                    <input id="amount" type="number" min="1" class="input is-rounded" value="1" name="amount">
                 </div>
             </div>
 
@@ -63,11 +64,11 @@
 
             <div>
                 <label for="buyersName" class="label">Købers navn: </label>
-                <input id="buyersName" type="text" class="input is-rounded" name="buyersName"> <br><br>
+                <input id="buyersName" type="text" maxlength="45" class="input is-rounded" placeholder="Mogens Langehvad" name="buyersName"> <br><br>
             </div>
 
                 <label for="comment" class="label">Kommentar: </label>
-                <textarea id="comment" class="textarea" placeholder="Købt grundet..."></textarea> </br>
+                <textarea id="comment" class="textarea" maxlength="105" placeholder="Købt grundet..."></textarea> </br>
 
             <input type="submit" class="button" id="button" value="Indsend">
         </form>
